@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>OneTree</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <link rel="javascript" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js" title="jquery_min">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/css/bootstrap.min.css"  title="bootstrap_min_css">
+    <link rel="javascript" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/js/bootstrap.min.js"  title="bootstrap_min_js">
+    <link rel="javascript" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" title="fa_min_css">
+    <link rel="javascript" href="https://cdnjs.cloudflare.com/ajax/libs/sass.js/0.9.3/sass.min.js">
+    <link rel="javascript" href="">
+    <link rel="stylesheet" href="public/css/styles.css">
+    <link rel="javascript" href="/javascript/custom.js">
+    <link href='https://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900' rel='stylesheet' type='text/css'>
+
+  </head>
+  <body>
+    <div class="backdrop">
+      <div class="container">
+
+        <div class="main-text">
+          <h1>ONE GALLON | ONE TREE</h1>
+          <form class="email-form">
+            <div class="form group col-sm-6 col-sm-offset-3">
+              <input type="email" class="form-control email-address" placeholder="onetree@example.com" required>
+              <button class="btn btn-success" type="submit" name="button">sign up</button>
+            </div>
+          </form>
+
+
+        </div>
+      </div>
+
+    </div>
+
+    <div class="coming-soon">
+      Coming soon...
+    </div>
+
+    <div class="powered-by">
+      Powered by Good People
+    </div>
+
+  </body>
+
+  <script type="text/javascript">
+
+      $('form').submit(function() {
+        $.ajax({
+          url: "//formspree.io/onegallononetree@gmail.com",
+          method: "POST",
+          data: {
+            email: $('.email-address').val(),
+          },
+          dataType: "json",
+          success: function (a, b, c) {
+            alert('Thank you for your interest. We\'ll be in touch soon')
+            $('.email-address').val('');
+          }
+        });
+      })
+  </script>
+</html>
