@@ -57,6 +57,10 @@
           success: function (a, b, c) {
             alert('Thank you for your interest. We\'ll be in touch soon')
             $('.email-address').val('');
+          }, error: function (a, b, c) {
+            console.log(a)
+            console.log(b)
+            console.log(c)
           }
         });
       })
