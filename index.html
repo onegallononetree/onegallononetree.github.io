@@ -46,7 +46,6 @@
   <script type="text/javascript">
 
       $('.email-form').submit(function() {
-        debugger
         $.ajax({
           url: "//formspree.io/onegallononetree@gmail.com",
           method: "POST",
@@ -58,9 +57,8 @@
             alert('Thank you for your interest. We\'ll be in touch soon')
             $('.email-address').val('');
           }, error: function (a, b, c) {
-            console.log(a)
-            console.log(b)
-            console.log(c)
+            console.log(a);
+            console.log(b);
           }
         });
       })
