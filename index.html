@@ -21,11 +21,12 @@
 
         <div class="main-text">
           <h1>ONE GALLON | ONE TREE</h1>
+          <form class="email-form">
             <div class="form group col-sm-6 col-sm-offset-3">
               <input type="email" class="form-control email-address" placeholder="onetree@example.com" required>
-              <button class="btn btn-success" type="submit" name="button">sign up</button>
-
+              <button class="btn btn-success" type="submit">sign up</button>
             </div>
+          </form>
 
         </div>
       </div>
@@ -44,7 +45,8 @@
 
   <script type="text/javascript">
 
-      $('.btn').click(function() {
+      $('.email-form').submit(function() {
+        debugger
         $.ajax({
           url: "//formspree.io/onegallononetree@gmail.com",
           method: "POST",
